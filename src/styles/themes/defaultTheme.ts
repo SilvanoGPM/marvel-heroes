@@ -10,6 +10,16 @@ export const defaultTheme: DefaultTheme = {
     primaryWhite: '#FFFFFF',
   },
 
+  gradients: {
+    blue: { from: '#005BEA', to: '#00C6FB' },
+    red: { from: '#ED1D24', to: '#ED1F69' },
+    purple: { from: '#B224EF', to: '#7579FF' },
+    green: { from: '#0BA360', to: '#3CBA92' },
+    pink: { from: '#FF7EB3', to: '#FF758C' },
+    black: { from: '#000000.0', to: '#000000' },
+    dark: { from: '#000000.0', to: '#000000' },
+  },
+
   zIndexes: {
     one: 1,
     dropdown: 1000,

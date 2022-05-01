@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
-    color: ${({ theme }) => theme.colors.primaryDark};
+    color: ${({ theme }) => theme.colors.primaryRed};
     background-color: ${({ theme }) => theme.colors.primaryWhite};
   }
 

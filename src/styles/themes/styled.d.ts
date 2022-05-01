@@ -2,6 +2,7 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export type ThemeFont = { size: string; weight: string };
+  export type ThemeGradient = { from: string; to: string };
 
   export interface DefaultTheme {
     colors: {
@@ -11,6 +12,16 @@ declare module 'styled-components' {
       primaryGrey: string;
       primarySilver: string;
       primaryWhite: string;
+    };
+
+    gradients: {
+      blue: ThemeGradient;
+      red: ThemeGradient;
+      purple: ThemeGradient;
+      green: ThemeGradient;
+      pink: ThemeGradient;
+      black: ThemeGradient;
+      dark: ThemeGradient;
     };
 
     zIndexes: {

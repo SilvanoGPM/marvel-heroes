@@ -1,6 +1,6 @@
 {
-  "name": "Next Boilerplate",
-  "short_name": "Boilerplate",
+  "name": "Marvel Heroes",
+  "short_name": "Marvel Heroes",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "theme_color": "#FFFFFF",
-  "description": "Boilerplate for NextJS projects",
+  "description": "Diversos personagens do universo marvel em um único lugar.",
   "background_color": "#FFFFFF",
   "start_url": "/",
   "display": "standalone",

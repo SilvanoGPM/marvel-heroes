@@ -28,16 +28,16 @@ export const defaultTheme: DefaultTheme = {
   },
 
   fonts: {
-    profileTitle: { size: '4rem', weight: 'heavy' },
-    homeTitle: { size: '3.2rem', weight: 'heavy' },
-    cardTitle: { size: '2rem', weight: 'heavy' },
-    sectionTitle: { size: '1.8rem', weight: 'bold' },
-    profileSubtitle: { size: '1.6rem', weight: 'medium' },
-    homeSubtitle: { size: '1.4rem', weight: 'semibold' },
-    description: { size: '1.4rem', weight: 'medium' },
-    caracterisct: { size: '1.2rem', weight: 'medium' },
-    abilitly: { size: '1.2rem', weight: 'regular' },
-    cardSubtitle: { size: '1rem', weight: 'medium' },
+    profileTitle: { size: '4rem', weight: '900' },
+    homeTitle: { size: '3.2rem', weight: '900' },
+    cardTitle: { size: '2rem', weight: '900' },
+    sectionTitle: { size: '1.8rem', weight: '700' },
+    profileSubtitle: { size: '1.6rem', weight: '500' },
+    homeSubtitle: { size: '1.4rem', weight: '600' },
+    description: { size: '1.4rem', weight: '500' },
+    caracterisct: { size: '1.2rem', weight: '500' },
+    abilitly: { size: '1.2rem', weight: '400' },
+    cardSubtitle: { size: '1rem', weight: '500' },
   },
 
   sizes: {

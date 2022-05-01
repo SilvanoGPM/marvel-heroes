@@ -13,12 +13,13 @@ export const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
-    color: ${({ theme }) => theme.colors.primaryRed};
+    color: ${({ theme }) => theme.colors.primaryDark};
     background-color: ${({ theme }) => theme.colors.primaryWhite};
   }
 
   body {
     font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
   }
 
   p, a {

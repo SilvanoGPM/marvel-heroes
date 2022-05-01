@@ -4,7 +4,7 @@ import { MarvelIcon, MenuIcon, SearchIcon } from 'components/CustomIcons';
 
 import * as S from './styles';
 
-export function Main() {
+export function HomeTemplate() {
   const { colors, gradients } = useTheme();
 
   return (
@@ -38,6 +38,11 @@ export function Main() {
           }}
         />
       </S.Header>
+
+      <S.HeadingContainer>
+        <S.HomeSubtitle>Bem vindo ao Marvel Heroes</S.HomeSubtitle>
+        <S.HomeTitle>Escolha o seu personagem</S.HomeTitle>
+      </S.HeadingContainer>
     </>
   );
 }

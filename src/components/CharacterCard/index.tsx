@@ -1,9 +1,7 @@
-import { Character } from 'data/characters';
-
 import * as S from './styles';
 
 type CharacterCardProps = {
-  data: Character;
+  data: { name: string; imagePath: string; alterEgo: string };
 };
 
 export function CharacterCard({ data }: CharacterCardProps) {

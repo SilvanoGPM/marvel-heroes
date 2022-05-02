@@ -9,10 +9,20 @@ import {
 
 import * as S from './styles';
 
+export type CategoryTypes = 'HERO' | 'VILLIAN' | 'ANTIHERO' | 'ALIEN' | 'HUMAN';
+
 export type Category = {
-  type: 'HERO' | 'VILLIAN' | 'ANTIHERO' | 'ALIEN' | 'HUMAN';
+  type: CategoryTypes;
   colors: [string, string];
   Icon: (props: IconProps) => JSX.Element;
+};
+
+const titles: { [key: string]: string } = {
+  HERO: 'Heróis',
+  VILLIAN: 'Vilões',
+  ANTIHERO: 'Anti-heróis',
+  ALIEN: 'Aliens',
+  HUMAN: 'Humanos',
 };
 
 const categories: Category[] = [
@@ -27,7 +37,7 @@ export function Categories() {
   return (
     <S.List>
       {categories.map(({ Icon, type, colors }) => (
-        <S.Item from={colors[0]} to={colors[1]} key={type}>
+        <S.Item from={colors[0]} to={colors[1]} key={type} title={titles[type]}>
           <Icon fill="white" stroke="none" size={24} />
         </S.Item>
       ))}

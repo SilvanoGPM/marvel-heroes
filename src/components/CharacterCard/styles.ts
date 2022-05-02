@@ -19,6 +19,7 @@ export const Card = styled.div<CardProps>`
   flex-direction: column;
   justify-content: flex-end;
   padding: ${({ theme }) => theme.sizes.small};
+  cursor: pointer;
 `;
 
 export const Name = styled.p`

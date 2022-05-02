@@ -42,18 +42,23 @@ export function HomeTemplate() {
         />
       </S.Header>
 
-      <S.HeadingContainer>
-        <S.HomeSubtitle>Bem vindo ao Marvel Heroes</S.HomeSubtitle>
-        <S.HomeTitle>Escolha o seu personagem</S.HomeTitle>
-      </S.HeadingContainer>
+      <S.Main>
+        <S.HeadingContainer>
+          <S.HomeSubtitle>Bem vindo ao Marvel Heroes</S.HomeSubtitle>
+          <S.HomeTitle>Escolha o seu personagem</S.HomeTitle>
+        </S.HeadingContainer>
 
-      <Categories />
+        <Categories />
 
-      <CharactersList title="Heróis" characters={characters.heroes} />
-      <CharactersList title="Vilões" characters={characters.villains} />
-      <CharactersList title="Anti-heróis" characters={characters.antiHeroes} />
-      <CharactersList title="Aliens" characters={characters.aliens} />
-      <CharactersList title="Humanos" characters={characters.humans} />
+        <CharactersList title="Heróis" characters={characters.heroes} />
+        <CharactersList title="Vilões" characters={characters.villains} />
+        <CharactersList
+          title="Anti-heróis"
+          characters={characters.antiHeroes}
+        />
+        <CharactersList title="Aliens" characters={characters.aliens} />
+        <CharactersList title="Humanos" characters={characters.humans} />
+      </S.Main>
     </>
   );
 }

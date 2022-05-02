@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  width: auto;
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -28,7 +30,7 @@ export const List = styled.li`
   align-items: center;
   gap: ${({ theme }) => theme.sizes.small};
   overflow: auto;
-  padding-left: ${({ theme }) => theme.sizes.medium};
+  padding: ${({ theme }) => `0 ${theme.sizes.medium}`};
   margin-bottom: ${({ theme }) => theme.sizes.medium};
   scrollbar-width: none;
   scrollbar-color: none;

@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+  ::selection {
+    background-color: ${({ theme }) => theme.colors.primaryRed};
+    color: ${({ theme }) => theme.colors.primaryWhite};
+  }
+
   * {
     margin: 0;
     padding: 0%;
@@ -15,6 +20,11 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     color: ${({ theme }) => theme.colors.primaryDark};
     background-color: ${({ theme }) => theme.colors.primaryWhite};
+  }
+
+  #__next {
+    max-width: 70rem;
+    margin: auto;
   }
 
   body {

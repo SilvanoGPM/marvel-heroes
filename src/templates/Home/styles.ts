@@ -9,6 +9,8 @@ export const Header = styled.header`
   padding: ${({ theme }) => `0 ${theme.sizes.medium}`};
 `;
 
+export const Main = styled.main``;
+
 export const HeadingContainer = styled.section`
   padding: ${({ theme }) => theme.sizes.medium};
 `;

@@ -8,7 +8,11 @@ type CharacterCardProps = {
 
 export function CharacterCard({ data }: CharacterCardProps) {
   return (
-    <S.Card image={data.imagePath}>
+    <S.Card
+      image={data.imagePath}
+      role="img"
+      aria-label={`Personagem da Marvel ${data.name}`}
+    >
       <S.AlterEgo>{data.alterEgo}</S.AlterEgo>
       <S.Name>{data.name}</S.Name>
     </S.Card>

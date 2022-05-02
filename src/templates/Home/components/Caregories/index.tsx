@@ -28,7 +28,7 @@ export function Categories() {
     <S.List>
       {categories.map(({ Icon, type, colors }) => (
         <S.Item from={colors[0]} to={colors[1]} key={type}>
-          <Icon color="white" size={24} />
+          <Icon fill="white" stroke="none" size={24} />
         </S.Item>
       ))}
     </S.List>

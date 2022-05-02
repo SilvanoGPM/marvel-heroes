@@ -4,6 +4,8 @@ import { MarvelIcon, MenuIcon, SearchIcon } from 'components/CustomIcons';
 
 import { Categories } from './components/Caregories';
 import * as S from './styles';
+import { CharactersList } from 'components/CharactersList';
+import { characters } from 'data/characters';
 
 export function HomeTemplate() {
   const { colors, gradients } = useTheme();
@@ -46,6 +48,12 @@ export function HomeTemplate() {
       </S.HeadingContainer>
 
       <Categories />
+
+      <CharactersList title="Heróis" characters={characters.heroes} />
+      <CharactersList title="Vilões" characters={characters.villains} />
+      <CharactersList title="Anti-heróis" characters={characters.antiHeroes} />
+      <CharactersList title="Aliens" characters={characters.aliens} />
+      <CharactersList title="Humanos" characters={characters.humans} />
     </>
   );
 }

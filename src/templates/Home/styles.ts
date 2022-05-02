@@ -24,4 +24,5 @@ export const HomeSubtitle = styled.h3`
   font-size: ${({ theme }) => theme.fonts.homeSubtitle.size};
   line-height: ${({ theme }) => theme.fonts.homeSubtitle.size};
   color: ${({ theme }) => theme.colors.primaryGrey};
+  margin-bottom: ${({ theme }) => `calc(${theme.sizes.small} / 2)`};
 `;

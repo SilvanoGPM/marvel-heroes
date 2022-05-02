@@ -2,6 +2,7 @@ import { useTheme } from 'styled-components';
 
 import { MarvelIcon, MenuIcon, SearchIcon } from 'components/CustomIcons';
 
+import { Categories } from './components/Caregories';
 import * as S from './styles';
 
 export function HomeTemplate() {
@@ -43,6 +44,8 @@ export function HomeTemplate() {
         <S.HomeSubtitle>Bem vindo ao Marvel Heroes</S.HomeSubtitle>
         <S.HomeTitle>Escolha o seu personagem</S.HomeTitle>
       </S.HeadingContainer>
+
+      <Categories />
     </>
   );
 }

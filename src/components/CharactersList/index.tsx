@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import useDraggableScroll from 'use-draggable-scroll';
 
 import { CharacterCard } from 'components/CharacterCard';
-import { Character } from 'data/characters';
+import { Character } from 'global/types';
 
 import * as S from './styles';
 
@@ -24,8 +24,11 @@ export function CharactersList({ title, characters }: CharactersListProps) {
       </S.Header>
 
       <S.List ref={listRef} onMouseDown={onMouseDown}>
-        {characters.map((data) => (
-          <CharacterCard key={data.name} data={data} />
+        {characters.map(({ name, alterEgo, image }) => (
+          <CharacterCard
+            key={name}
+            data={{ name, alterEgo, image: image?.[0].url }}
+          />
         ))}
       </S.List>
     </S.Container>

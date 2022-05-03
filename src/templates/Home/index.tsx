@@ -1,13 +1,24 @@
 import { useTheme } from 'styled-components';
 
 import { MarvelIcon, MenuIcon, SearchIcon } from 'components/CustomIcons';
+import { CharactersList } from 'components/CharactersList';
+import { Character } from 'global/types';
 
 import { Categories } from './components/Caregories';
-import * as S from './styles';
-import { CharactersList } from 'components/CharactersList';
-import { characters } from 'data/characters';
 
-export function HomeTemplate() {
+import * as S from './styles';
+
+export type HomeTemplateProps = {
+  characters: {
+    heroes: Character[];
+    villains: Character[];
+    antiHeroes: Character[];
+    aliens: Character[];
+    humans: Character[];
+  };
+};
+
+export function HomeTemplate({ characters }: HomeTemplateProps) {
   const { colors, gradients } = useTheme();
 
   return (

@@ -1,13 +1,17 @@
 import * as S from './styles';
 
 type CharacterCardProps = {
-  data: { name: string; imagePath: string; alterEgo: string };
+  data: {
+    name: string;
+    image: string;
+    alterEgo: string;
+  };
 };
 
 export function CharacterCard({ data }: CharacterCardProps) {
   return (
     <S.Card
-      image={data.imagePath}
+      image={data.image}
       role="img"
       aria-label={`Personagem da Marvel ${data.name}`}
     >

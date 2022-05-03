@@ -1,6 +1,7 @@
 import { CharacterType } from 'graphql/generated/graphql';
 
 export type Character = {
+  slug: string;
   name: string;
   alterEgo: string;
   birth: Date;

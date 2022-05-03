@@ -4466,9 +4466,16 @@ export type GetAllCharactersQueryVariables = Exact<{
 }>;
 
 
-export type GetAllCharactersQuery = { __typename?: 'Query', characters: Array<{ __typename?: 'Character', name: string, alterEgo: string, birth: any, weight: number, height: number, universe: string, abilities: any, character_type: CharacterType, biography: { __typename?: 'RichText', html: string, text: string }, image: Array<{ __typename?: 'Asset', url: string, width?: number | null, height?: number | null }>, movie: Array<{ __typename?: 'Movie', images: Array<{ __typename?: 'Asset', url: string }> }> }> };
+export type GetAllCharactersQuery = { __typename?: 'Query', characters: Array<{ __typename?: 'Character', slug: string, name: string, alterEgo: string, birth: any, weight: number, height: number, universe: string, abilities: any, character_type: CharacterType, biography: { __typename?: 'RichText', html: string, text: string }, image: Array<{ __typename?: 'Asset', url: string, width?: number | null, height?: number | null }>, movie: Array<{ __typename?: 'Movie', images: Array<{ __typename?: 'Asset', url: string }> }> }> };
 
 export type GetHomeCharactersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetHomeCharactersQuery = { __typename?: 'Query', characters: Array<{ __typename?: 'Character', name: string, slug: string, alterEgo: string, character_type: CharacterType, image: Array<{ __typename?: 'Asset', url: string, width?: number | null }> }> };
+
+export type GetCharacterBySlugQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type GetCharacterBySlugQuery = { __typename?: 'Query', character?: { __typename?: 'Character', name: string, alterEgo: string, birth: any, weight: number, height: number, universe: string, abilities: any, character_type: CharacterType, biography: { __typename?: 'RichText', html: string, text: string }, image: Array<{ __typename?: 'Asset', url: string, width?: number | null, height?: number | null }>, movie: Array<{ __typename?: 'Movie', images: Array<{ __typename?: 'Asset', url: string }> }> } | null };

@@ -20,6 +20,21 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     color: ${({ theme }) => theme.colors.primaryDark};
     background-color: ${({ theme }) => theme.colors.primaryWhite};
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) =>
+      `${theme.colors.primaryRed} ${theme.colors.primaryDark}`};
+
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme.colors.primaryDark};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.colors.primaryRed};
+    }
   }
 
   body {

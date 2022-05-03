@@ -2,11 +2,11 @@ import { GetStaticProps } from 'next';
 
 import { HomeTemplate, HomeTemplateProps } from 'templates/Home';
 import client from 'graphql/client';
-import { GET_ALL_CHARACTERS } from 'graphql/queries';
+import { GET_HOME_CHARACTERS } from 'graphql/queries';
 
 import {
   CharacterType,
-  GetAllCharactersQuery,
+  GetHomeCharactersQuery,
 } from 'graphql/generated/graphql';
 
 export default function Home({ characters }: HomeTemplateProps) {
@@ -19,8 +19,8 @@ function byCharacterType(type: CharacterType) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { characters } = await client.request<GetAllCharactersQuery>(
-    GET_ALL_CHARACTERS,
+  const { characters } = await client.request<GetHomeCharactersQuery>(
+    GET_HOME_CHARACTERS,
   );
 
   const heroes = characters.filter(byCharacterType(CharacterType.Hero));

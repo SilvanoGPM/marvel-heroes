@@ -18,6 +18,9 @@ export const IconWrapper = styled.div<IconWrapperProps>`
     height: ${({ height = 16 }) => `${height}px`};
     color: ${({ fill, stroke, theme }) =>
       fill || stroke || theme.colors.primaryDark};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   path {

@@ -2,13 +2,13 @@ import { useRef } from 'react';
 import useDraggableScroll from 'use-draggable-scroll';
 
 import { CharacterCard } from 'components/CharacterCard';
-import { Character } from 'global/types';
+import { HomeCharacter } from 'templates/Home';
 
 import * as S from './styles';
 
 type CharactersListProps = {
   title: string;
-  characters: Character[];
+  characters: HomeCharacter[];
 };
 
 export function CharactersList({ title, characters }: CharactersListProps) {

@@ -30,3 +30,18 @@ export const GET_ALL_CHARACTERS = gql`
     }
   }
 `;
+
+export const GET_HOME_CHARACTERS = gql`
+  query getHomeCharacters {
+    characters {
+      name
+      slug
+      alterEgo
+      character_type
+      image {
+        url
+        width
+      }
+    }
+  }
+`;

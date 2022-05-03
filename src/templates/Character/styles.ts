@@ -61,3 +61,19 @@ export const Biography = styled.div`
     opacity: 0.75;
   }
 `;
+
+export const SectionTitle = styled.div`
+  margin: ${({ theme }) => `${theme.sizes.medium} 0`};
+  padding-left: ${({ theme }) => theme.sizes.small};
+  color: ${({ theme }) => theme.colors.primaryWhite};
+  font-size: ${({ theme }) => theme.fonts.sectionTitle.size};
+  line-height: ${({ theme }) => theme.fonts.sectionTitle.size};
+  font-weight: ${({ theme }) => theme.fonts.sectionTitle.weight};
+`;
+
+export const Abilities = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.sizes.medium};
+`;

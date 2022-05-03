@@ -39,5 +39,6 @@ export const getStaticProps: GetStaticProps = async () => {
         humans,
       },
     },
+    revalidate: 60,
   };
 };

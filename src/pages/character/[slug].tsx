@@ -28,6 +28,8 @@ export async function getStaticPaths() {
     },
   );
 
+  console.log(characters.length);
+
   const paths = characters.map(({ slug }) => ({ params: { slug } }));
 
   return { paths, fallback: true };
@@ -45,5 +47,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  return { props: { character } };
+  return { props: { character }, revalidate: 60 };
 };

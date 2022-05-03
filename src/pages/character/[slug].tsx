@@ -1,13 +1,14 @@
+import { GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+
 import client from 'graphql/client';
+import { GET_ALL_CHARACTERS, GET_CHARACTER_BY_SLUG } from 'graphql/queries';
+import { CharacterTemplate, CharacterTemplateProps } from 'templates/Character';
+
 import {
   GetAllCharactersQuery,
   GetCharacterBySlugQuery,
 } from 'graphql/generated/graphql';
-import { GET_ALL_CHARACTERS, GET_CHARACTER_BY_SLUG } from 'graphql/queries';
-import { GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
-
-import { CharacterTemplate, CharacterTemplateProps } from 'templates/Character';
 
 export default function CharacterComponent({
   character,

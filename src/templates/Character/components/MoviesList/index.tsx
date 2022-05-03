@@ -12,10 +12,6 @@ export function MoviesList({ movies }: MoviesListProps) {
 
   return (
     <S.Container>
-      <S.Header>
-        <S.Heading>Filmes</S.Heading>
-      </S.Header>
-
       <S.List ref={listRef} onMouseDown={onMouseDown}>
         {movies.map(({ images: [{ url }] }) => (
           <S.MovieItem key={url} src={url} />

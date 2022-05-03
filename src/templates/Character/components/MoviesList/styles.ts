@@ -1,19 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: auto;
-`;
-
-export const Header = styled.div`
-  padding: ${({ theme }) => `0 ${theme.sizes.small}`};
-  margin: ${({ theme }) => `${theme.sizes.medium} 0`};
-`;
-
-export const Heading = styled.h2`
-  color: ${({ theme }) => theme.colors.primaryWhite};
-  font-size: ${({ theme }) => theme.fonts.sectionTitle.size};
-  font-weight: ${({ theme }) => theme.fonts.sectionTitle.weight};
-`;
+export const Container = styled.div``;
 
 export const List = styled.ul`
   display: flex;
@@ -21,7 +8,7 @@ export const List = styled.ul`
   gap: ${({ theme }) => theme.sizes.small};
   overflow: auto;
   padding: ${({ theme }) => `0 ${theme.sizes.small}`};
-  margin-bottom: ${({ theme }) => theme.sizes.medium};
+  padding-bottom: ${({ theme }) => theme.sizes.medium};
   scrollbar-width: none;
   scrollbar-color: none;
 

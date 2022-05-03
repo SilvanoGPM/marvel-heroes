@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   padding: ${({ theme }) => `0 ${theme.sizes.small}`};
+  overflow: hidden;
 
   @media screen and (max-width: 350px) {
     flex-direction: column;
@@ -22,13 +23,16 @@ export const Name = styled.p`
   color: ${({ theme }) => theme.colors.primaryWhite};
   opacity: 0.75;
   width: 100px;
+
+  @media screen and (max-width: 350px) {
+    text-align: center;
+  }
 `;
 
 export const Bar = styled.div`
   display: flex;
   align-items: center;
   height: 12px;
-  gap: 4px;
   flex: 1;
 `;
 
@@ -37,6 +41,7 @@ export const Point = styled.div`
   height: 8px;
   background-color: white;
   opacity: 0.25;
+  margin-left: 4px;
 
   &.show {
     opacity: 1;

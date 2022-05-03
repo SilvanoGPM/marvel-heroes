@@ -5,6 +5,7 @@ export const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: ${({ theme }) => `${theme.sizes.medium} 0`};
+  padding: ${({ theme }) => theme.sizes.small};
 `;
 
 export const CoverItem = styled.div`

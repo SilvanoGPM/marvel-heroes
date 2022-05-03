@@ -20,12 +20,12 @@ export function CharacterTemplate({ character }: CharacterTemplateProps) {
 
   return (
     <S.Container>
-      <S.GoBack onClick={router.back}>
-        <BackIcon color="white" size={24} />
-      </S.GoBack>
+      <S.Banner image={image} />
 
-      <S.Banner image={image}>
-        <S.Spacer />
+      <S.Content>
+        <S.GoBack onClick={router.back}>
+          <BackIcon color="white" size={24} />
+        </S.GoBack>
 
         <S.AlterEgo>{character.alterEgo}</S.AlterEgo>
         <S.Title>{character.name}</S.Title>
@@ -35,22 +35,29 @@ export function CharacterTemplate({ character }: CharacterTemplateProps) {
         <S.Biography
           dangerouslySetInnerHTML={{ __html: character.biography.html }}
         />
-      </S.Banner>
 
-      <S.SectionTitle>Habilidades</S.SectionTitle>
+        <S.SectionTitle>Habilidades</S.SectionTitle>
 
-      <S.Abilities>
-        <StrenghBar name="Força" total={character.abilities.force} />
-        <StrenghBar
-          name="Inteligência"
-          total={character.abilities.intelligence}
-        />
-        <StrenghBar name="Agilidade" total={character.abilities.agility} />
-        <StrenghBar name="Resistência" total={character.abilities.endurance} />
-        <StrenghBar name="Velocidade" total={character.abilities.velocity} />
-      </S.Abilities>
+        <S.Abilities>
+          <StrenghBar name="Força" total={character.abilities.force} />
+          <StrenghBar
+            name="Inteligência"
+            total={character.abilities.intelligence}
+          />
+          <StrenghBar name="Agilidade" total={character.abilities.agility} />
+          <StrenghBar
+            name="Resistência"
+            total={character.abilities.endurance}
+          />
+          <StrenghBar name="Velocidade" total={character.abilities.velocity} />
+        </S.Abilities>
 
-      <MoviesList movies={character.movie} />
+        <S.SectionTitle>Filmes</S.SectionTitle>
+
+        <S.Movies>
+          <MoviesList movies={character.movie} />
+        </S.Movies>
+      </S.Content>
     </S.Container>
   );
 }

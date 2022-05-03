@@ -4,7 +4,7 @@ export type Character = {
   slug: string;
   name: string;
   alterEgo: string;
-  birth: Date;
+  birth: string;
   weight: number;
   height: number;
   universe: string;

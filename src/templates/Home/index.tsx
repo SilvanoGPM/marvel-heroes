@@ -28,7 +28,7 @@ export function HomeTemplate({ characters }: HomeTemplateProps) {
   const { colors, gradients } = useTheme();
 
   return (
-    <>
+    <S.Wrapper>
       <S.Header>
         <MenuIcon
           size={24}
@@ -76,6 +76,6 @@ export function HomeTemplate({ characters }: HomeTemplateProps) {
         <CharactersList title="Aliens" characters={characters.aliens} />
         <CharactersList title="Humanos" characters={characters.humans} />
       </S.Main>
-    </>
+    </S.Wrapper>
   );
 }

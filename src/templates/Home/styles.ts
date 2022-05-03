@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  max-width: 70rem;
+  margin: auto;
+`;
+
 export const Header = styled.header`
   height: 64px;
   width: 100%;

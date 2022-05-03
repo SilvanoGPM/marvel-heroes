@@ -22,11 +22,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.primaryWhite};
   }
 
-  #__next {
-    max-width: 70rem;
-    margin: auto;
-  }
-
   body {
     font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;

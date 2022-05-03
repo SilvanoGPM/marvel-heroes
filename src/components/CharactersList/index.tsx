@@ -12,7 +12,7 @@ type CharactersListProps = {
 };
 
 export function CharactersList({ title, characters }: CharactersListProps) {
-  const listRef = useRef<HTMLLIElement | null>(null);
+  const listRef = useRef<HTMLUListElement | null>(null);
 
   const { onMouseDown } = useDraggableScroll(listRef);
 
@@ -24,10 +24,10 @@ export function CharactersList({ title, characters }: CharactersListProps) {
       </S.Header>
 
       <S.List ref={listRef} onMouseDown={onMouseDown}>
-        {characters.map(({ name, alterEgo, image }) => (
+        {characters.map(({ image, ...props }) => (
           <CharacterCard
-            key={name}
-            data={{ name, alterEgo, image: image?.[0].url }}
+            key={props.name}
+            data={{ ...props, image: image?.[0].url }}
           />
         ))}
       </S.List>

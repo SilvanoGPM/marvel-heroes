@@ -13,6 +13,7 @@ export const GoBack = styled.button`
   background-color: transparent;
   position: absolute;
   top: ${({ theme }) => theme.sizes.small};
+  margin-left: 1rem;
 `;
 
 export const Banner = styled.div<BannerProps>`

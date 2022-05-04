@@ -17,7 +17,7 @@ export const List = styled.ul`
   }
 
   &::-webkit-scrollbar-track {
-    background: orange;
+    background: none;
   }
 
   &::-webkit-scrollbar-thumb {

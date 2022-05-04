@@ -12,8 +12,7 @@ export const GoBack = styled.button`
   border: none;
   background-color: transparent;
   position: absolute;
-  top: -28rem;
-  left: ${({ theme }) => theme.sizes.small};
+  top: ${({ theme }) => theme.sizes.small};
 `;
 
 export const Banner = styled.div<BannerProps>`
@@ -39,7 +38,6 @@ export const Content = styled.div`
   margin: 0 auto;
   margin-top: -30rem;
   max-width: 50rem;
-  position: relative;
 `;
 
 export const AlterEgo = styled.p`

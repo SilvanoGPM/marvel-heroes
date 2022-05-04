@@ -22,12 +22,12 @@ export function CharacterTemplate({ character }: CharacterTemplateProps) {
   return (
     <>
       <NextSeo
-        title={`${character.name} - World Trips`}
+        title={`${character.name} - Marvel Heroes`}
         description={character.biography?.text}
         canonical="https://marvel-heroes-puce.vercel.app/"
         openGraph={{
           url: 'https://marvel-heroes-puce.vercel.app/',
-          title: `${character.name} - World Trips`,
+          title: `${character.name} - Marvel Heroes`,
           description: character.biography?.text,
           images: [
             {

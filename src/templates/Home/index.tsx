@@ -42,7 +42,7 @@ export function HomeTemplate({ characters }: HomeTemplateProps) {
           site_name: 'Marvel Heroes',
           images: [
             {
-              url: 'https://world-trips.vercel.app/images/cover.png',
+              url: 'https://marvel-heroes-puce.vercel.app/images/cover.png',
               width: 1280,
               height: 720,
               alt: 'Marvel Heroes',

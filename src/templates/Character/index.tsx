@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
 import { BackIcon } from 'components/CustomIcons';
 import { Character } from 'global/types';
@@ -19,45 +20,69 @@ export function CharacterTemplate({ character }: CharacterTemplateProps) {
   const image = character.image[0].url;
 
   return (
-    <S.Container>
-      <S.Banner image={image} />
+    <>
+      <NextSeo
+        title={`${character.name} - World Trips`}
+        description={character.biography?.text}
+        canonical="https://marvel-heroes-puce.vercel.app/"
+        openGraph={{
+          url: 'https://marvel-heroes-puce.vercel.app/',
+          title: `${character.name} - World Trips`,
+          description: character.biography?.text,
+          images: [
+            {
+              url: character.image[0].url,
+              width: character.image[0].width,
+              height: character.image[0].height,
+              alt: character.name,
+            },
+          ],
+        }}
+      />
 
-      <S.Content>
-        <S.GoBack onClick={router.back}>
-          <BackIcon color="white" size={24} />
-        </S.GoBack>
+      <S.Container>
+        <S.Banner image={image} />
 
-        <S.AlterEgo>{character.alterEgo}</S.AlterEgo>
-        <S.Title>{character.name}</S.Title>
+        <S.Content>
+          <S.GoBack onClick={router.back}>
+            <BackIcon color="white" size={24} />
+          </S.GoBack>
 
-        <Cover {...character} />
+          <S.AlterEgo>{character.alterEgo}</S.AlterEgo>
+          <S.Title>{character.name}</S.Title>
 
-        <S.Biography
-          dangerouslySetInnerHTML={{ __html: character.biography.html }}
-        />
+          <Cover {...character} />
 
-        <S.SectionTitle>Habilidades</S.SectionTitle>
-
-        <S.Abilities>
-          <StrenghBar name="Força" total={character.abilities.force} />
-          <StrenghBar
-            name="Inteligência"
-            total={character.abilities.intelligence}
+          <S.Biography
+            dangerouslySetInnerHTML={{ __html: character.biography.html }}
           />
-          <StrenghBar name="Agilidade" total={character.abilities.agility} />
-          <StrenghBar
-            name="Resistência"
-            total={character.abilities.endurance}
-          />
-          <StrenghBar name="Velocidade" total={character.abilities.velocity} />
-        </S.Abilities>
 
-        <S.SectionTitle>Filmes</S.SectionTitle>
+          <S.SectionTitle>Habilidades</S.SectionTitle>
 
-        <S.Movies>
-          <MoviesList movies={character.movie} />
-        </S.Movies>
-      </S.Content>
-    </S.Container>
+          <S.Abilities>
+            <StrenghBar name="Força" total={character.abilities.force} />
+            <StrenghBar
+              name="Inteligência"
+              total={character.abilities.intelligence}
+            />
+            <StrenghBar name="Agilidade" total={character.abilities.agility} />
+            <StrenghBar
+              name="Resistência"
+              total={character.abilities.endurance}
+            />
+            <StrenghBar
+              name="Velocidade"
+              total={character.abilities.velocity}
+            />
+          </S.Abilities>
+
+          <S.SectionTitle>Filmes</S.SectionTitle>
+
+          <S.Movies>
+            <MoviesList movies={character.movie} />
+          </S.Movies>
+        </S.Content>
+      </S.Container>
+    </>
   );
 }

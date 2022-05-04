@@ -11,7 +11,7 @@ const nextConfig = {
 module.exports = withPWA({
   ...nextConfig,
   swcMinify: true,
-  experimental: {
+  compiler: {
     styledComponents: true,
   },
   pwa: {

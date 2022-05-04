@@ -1,11 +1,15 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
+
 import FontStyles from 'styles/fonts';
 import NextNProgress from 'nextjs-progressbar';
 
 import { GlobalStyles } from 'styles/global';
 import { defaultTheme } from 'styles/themes/defaultTheme';
+
+import SEO from '../../next-seo.config';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,13 +21,15 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
 
-        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="theme-color" content="#F2264B" />
 
         <meta
           name="description"
           content="Diversos personagens do universo marvel em um único lugar."
         />
       </Head>
+
+      <DefaultSeo {...SEO} />
 
       <FontStyles />
       <GlobalStyles />

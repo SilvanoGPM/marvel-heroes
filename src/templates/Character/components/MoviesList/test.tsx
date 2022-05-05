@@ -2,7 +2,7 @@ import { MoviesList } from '.';
 import { renderComponentWithTheme } from 'utils/renderComponentWithTheme';
 
 describe('<MoviesListi />', () => {
-  test('should render title and list cards', () => {
+  test('should render list of images', () => {
     const movie: { images: Array<{ url: string }> } = {
       images: [{ url: '' }],
     };

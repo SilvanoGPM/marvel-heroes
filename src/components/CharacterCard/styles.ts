@@ -10,7 +10,7 @@ export const Card = styled.div<CardProps>`
   width: 140px;
   height: 230px;
   background-position: center center, 100%, 100%;
-  background-size: 100% 100%, 100%, 100%;
+  background-size: cover;
   background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%),
     ${({ image }) => `url(${image})`};
   background-repeat: no-repeat, no-repeat;
